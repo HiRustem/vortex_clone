@@ -1,0 +1,431 @@
+:root {
+  --white: #fff;
+  --black: #000;
+
+  --special_black: #030306;
+  --special_gray: #b5b5b6;
+  --special_green: #7de260;
+  --special_red: #e42323;
+
+  --gen-dark-rgb: 17, 18, 28;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0d1117; /* Темный фон */
+  color: #c9d1d9; /* Светлый текст */
+  font-family: Arial, sans-serif; /* Шрифт */
+}
+.chart-container {
+  position: relative;
+  margin: auto;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+/* Стили для кнопки и других элементов... */
+.button {
+  background-color: var(--white); /* Цвет фона кнопки */
+  border: none;
+  color: var(--black);
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 25px;
+}
+
+.button:hover,
+.button:active {
+  background-color: var(--special_green);
+}
+
+.button:disabled {
+  pointer-events: none;
+
+  opacity: 0.5;
+}
+
+.hidden {
+  display: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.button .show {
+  display: flex;
+}
+
+.h1,
+h1 {
+  font-size: clamp(2.25rem, 1.7143rem + 1.7143vw, 3rem);
+}
+.h2,
+h2 {
+  font-size: clamp(2rem, 1.6429rem + 1.1429vw, 2.5rem);
+}
+.h3,
+h3 {
+  font-size: clamp(1.75rem, 1.5714rem + 0.5714vw, 2rem);
+}
+.h4,
+h4 {
+  font-size: calc(1.275rem + 0.3vw);
+}
+
+@media (min-width: 1200px) {
+  .h4,
+  h4 {
+    font-size: 1.5rem;
+  }
+}
+.h5,
+h5 {
+  font-size: 1.25rem;
+}
+.h6,
+h6 {
+  font-size: 1.125rem;
+}
+p {
+  margin-top: 0;
+}
+
+a {
+  color: rgba(var(--gen-link-color-rgb), var(--gen-link-opacity, 1));
+  text-decoration: underline;
+}
+
+a:hover {
+  color: var(--special_green);
+}
+a:not([href]):not([class]),
+a:not([href]):not([class]):hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+.percent {
+  margin-top: 20px;
+}
+.percent .up {
+  color: green;
+  font-size: 25px;
+  font-weight: bold;
+  margin-right: 20px;
+}
+.percent .down {
+  color: red;
+  font-size: 25px;
+  font-weight: bold;
+}
+.percent .down img,
+.percent .up img {
+  width: 100px;
+}
+
+#scale-indicator__container {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  max-width: 150px;
+  max-height: 150px;
+}
+
+.scale-triangle__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+}
+
+.scale-triangle__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 150px;
+  height: 150px;
+
+  background: var(--special_green);
+  clip-path: path(
+    "M5 145 A20 20 0 0 1 5 120 L75 10 A25 25 0 0 1 95 10 L145 140 A20 20 0 0 1 130 145 Z"
+  );
+}
+
+#scale-green {
+  background-color: var(--special_green);
+  transition: height 0.5s ease-in-out;
+  transform: translateY(180deg);
+}
+
+#scale-red {
+  background-color: var(--special_red);
+  transition: height 0.5s ease-in-out;
+}
+
+.scale {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+}
+
+#start {
+  margin: 20px 0;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--white);
+  font-weight: 600;
+  line-height: 1.25;
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+}
+
+.page {
+  padding: 20px;
+
+  --gen-bg-opacity: 1;
+  background-color: rgba(var(--gen-dark-rgb), var(--gen-bg-opacity)) !important;
+}
+
+@media (max-width: 768px) {
+  .page {
+    padding: 10px;
+  }
+}
+
+.settings {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.logo_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo_image-container {
+  width: 10rem;
+  height: 10rem;
+}
+
+.logo_image {
+  width: 100%;
+  height: 100%;
+}
+
+.settings-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.settings-section_wrapper {
+  display: flex;
+  gap: 50px;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.start-button {
+  width: fit-content;
+}
+
+.custom-select {
+  position: relative;
+  width: 200px;
+}
+
+.select-trigger {
+  background-color: #f0f0f0;
+  padding: 0 5px 0 15px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 200px;
+  color: var(--black);
+}
+
+.select-icon {
+  width: 100%;
+  height: 100%;
+
+  max-width: 35px;
+  max-height: 35px;
+
+  color: var(--black);
+
+  transition: all 0.3s linear;
+}
+
+.options {
+  display: none;
+  position: absolute;
+  top: 110%;
+  left: 0;
+  background-color: #fff;
+  border-radius: 20px;
+  margin-top: 2px;
+  list-style: none;
+  padding: 0;
+  z-index: 100;
+  overflow-y: auto;
+  width: 100%;
+  color: var(--black);
+}
+
+.option {
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.option:hover {
+  background-color: var(--special_green);
+}
+
+.option.selected {
+  background-color: var(--special_green);
+}
+
+.custom-select.open .options {
+  display: block;
+}
+
+.custom-select.open .select-trigger .select-icon {
+  transform: rotate(180deg);
+}
+
+/* Основной контейнер индикатора */
+.circular-indicator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
+
+/* Внешний круг с использованием переменной --progress */
+.circle {
+  --progress: 0;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: conic-gradient(
+    #00c853 0deg,
+    #b2ff59 calc(var(--progress) * 1deg),
+    #f44336 calc(var(--progress) * 1deg),
+    #ff5252 360deg
+  );
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.5s linear; /* Плавный переход между состояниями */
+}
+
+/* Внутренний круг */
+.inner-circle {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: #ffffff;
+  z-index: 1;
+  position: absolute;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Текст внутри индикатора */
+.percentage {
+  position: absolute;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  z-index: 2;
+}
+
+.pulse-green {
+  animation: pulse-green 2s infinite linear;
+}
+
+.pulse-red {
+  animation: pulse-red 2s infinite linear;
+}
+
+/* Анимация изменения прогресса */
+@keyframes animate-progress {
+  from {
+    --progress: 0;
+  }
+  to {
+    --progress: 100;
+  }
+}
+
+@keyframes pulse-green {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 10px var(--special_green);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px var(--special_green);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 10px var(--special_green);
+  }
+}
+
+@keyframes pulse-red {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 10px var(--special_red);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px var(--special_red);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 10px var(--special_red);
+  }
+}

@@ -68,7 +68,20 @@
               <h4 class="navbar-brand__heading mb-0 bold">VortexBot</h4>
             </a>
 
-            <div class="header-timer__container">
+            <a
+              href="https://t.me/SolTradingBot"
+              target="_blank"
+              class="btn btn-sm bot_link navbar__bot-link"
+              data-aos="fade-up-sm"
+              data-aos-delay="250"
+              ><img
+                class="telegram-icon"
+                src="./assets/images/svg/telegram.svg"
+                alt="telegram icon"
+              />JOIN TELEGRAM</a
+            >
+
+            <!-- <div class="header-timer__container">
               <div id="timer-widget" class="timer header-timer">
                 <div class="header-timer__numbers">
                   <p id="timer-first-number" class="header-timer__number">0</p>
@@ -84,7 +97,7 @@
                   <p id="timer-fourth-number" class="header-timer__number">0</p>
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </nav>
@@ -167,7 +180,11 @@
                     class="btn btn-sm bot_link bot_link-desktop"
                     data-aos="fade-up-sm"
                     data-aos-delay="250"
-                    >JOIN TELEGRAM</a
+                    ><img
+                      class="telegram-icon"
+                      src="./assets/images/svg/telegram.svg"
+                      alt="telegram icon"
+                    />JOIN TELEGRAM</a
                   >
                   <!-- <form action="#" class="pe-xl-10" data-aos="fade-up-sm" data-aos-delay="150">
                   <div class="input-group with-icon">
@@ -242,7 +259,11 @@
               class="btn btn-sm bot_link bot_link-tablet"
               data-aos="fade-up-sm"
               data-aos-delay="250"
-              >JOIN TELEGRAM</a
+              ><img
+                class="telegram-icon"
+                src="./assets/images/svg/telegram.svg"
+                alt="telegram icon"
+              />JOIN TELEGRAM</a
             >
           </div>
         </section>
@@ -348,7 +369,11 @@
             class="btn btn-sm bot_link"
             data-aos="fade-up-sm"
             data-aos-delay="250"
-            >JOIN TELEGRAM</a
+            ><img
+              class="telegram-icon"
+              src="./assets/images/svg/telegram.svg"
+              alt="telegram icon"
+            />JOIN TELEGRAM</a
           >
         </section>
 
@@ -880,7 +905,11 @@
             class="btn btn-sm bot_link"
             data-aos="fade-up-sm"
             data-aos-delay="250"
-            >JOIN TELEGRAM</a
+            ><img
+              class="telegram-icon"
+              src="./assets/images/svg/telegram.svg"
+              alt="telegram icon"
+            />JOIN TELEGRAM</a
           >
         </section>
 
@@ -1012,7 +1041,11 @@
             class="btn btn-sm bot_link"
             data-aos="fade-up-sm"
             data-aos-delay="250"
-            >JOIN TELEGRAM</a
+            ><img
+              class="telegram-icon"
+              src="./assets/images/svg/telegram.svg"
+              alt="telegram icon"
+            />JOIN TELEGRAM</a
           >
         </section>
 
@@ -1660,7 +1693,11 @@
             data-aos="fade-up-sm"
             data-aos-delay="250"
             tabindex="-10"
-            >JOIN TELEGRAM</a
+            ><img
+              class="telegram-icon"
+              src="./assets/images/svg/telegram.svg"
+              alt="telegram icon"
+            />JOIN TELEGRAM</a
           >
         </article>
       </dialog>
@@ -1703,19 +1740,19 @@
         let minutes = 5;
         let seconds = 0;
 
-        const timerWidgetsFirstNumbers = document.querySelectorAll(
-          "#timer-first-number"
-        );
+        // const timerWidgetsFirstNumbers = document.querySelectorAll(
+        //   "#timer-first-number"
+        // );
 
-        const timerWidgetsSecondNumbers = document.querySelectorAll(
-          "#timer-second-number"
-        );
-        const timerWidgetsThirdNumbers = document.querySelectorAll(
-          "#timer-third-number"
-        );
-        const timerWidgetsFourthNumbers = document.querySelectorAll(
-          "#timer-fourth-number"
-        );
+        // const timerWidgetsSecondNumbers = document.querySelectorAll(
+        //   "#timer-second-number"
+        // );
+        // const timerWidgetsThirdNumbers = document.querySelectorAll(
+        //   "#timer-third-number"
+        // );
+        // const timerWidgetsFourthNumbers = document.querySelectorAll(
+        //   "#timer-fourth-number"
+        // );
 
         function updateNumbers(numberElements, number) {
           for (let i = 0; i < numberElements.length; i++) {
@@ -1735,13 +1772,13 @@
             seconds -= 1;
           }
 
-          const stringMinutes = String(minutes).padStart(2, "0");
-          const stringSeconds = String(seconds).padStart(2, "0");
+          // const stringMinutes = String(minutes).padStart(2, "0");
+          // const stringSeconds = String(seconds).padStart(2, "0");
 
-          updateNumbers(timerWidgetsFirstNumbers, stringMinutes[0]);
-          updateNumbers(timerWidgetsSecondNumbers, stringMinutes[1]);
-          updateNumbers(timerWidgetsThirdNumbers, stringSeconds[0]);
-          updateNumbers(timerWidgetsFourthNumbers, stringSeconds[1]);
+          // updateNumbers(timerWidgetsFirstNumbers, stringMinutes[0]);
+          // updateNumbers(timerWidgetsSecondNumbers, stringMinutes[1]);
+          // updateNumbers(timerWidgetsThirdNumbers, stringSeconds[0]);
+          // updateNumbers(timerWidgetsFourthNumbers, stringSeconds[1]);
         }, 1000);
 
         function copyContract() {

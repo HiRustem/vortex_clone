@@ -12,7 +12,7 @@
     delay: 50,
     duration: 600,
     easing: "cubic-bezier(0.77, 0, 0.175, 1)",
-    once: !0,
+    once: !1,
     mirror: !1,
     anchorPlacement: "top-bottom",
   });

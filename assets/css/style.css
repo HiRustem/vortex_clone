@@ -4942,6 +4942,13 @@ article img {
   padding-block: 2rem;
 }
 
+.feedback__title {
+  margin-bottom: 2rem;
+  font-size: clamp(1.5rem, 0.9718rem + 2.2535vw, 3rem);
+  text-align: center;
+  color: var(--gen-white);
+}
+
 .feedback-swiper__card {
   display: flex;
   flex-direction: column;
@@ -5021,6 +5028,7 @@ article img {
 
 .feedback-swiper__user-name {
   margin: 0;
+  font-weight: 700;
 }
 
 .feedback-swiper-button:after,

@@ -3984,6 +3984,10 @@ article img {
   left: 0;
 }
 
+.main-description__text {
+  margin: 0;
+}
+
 .navbar[data-bs-theme="dark"] {
   --gen-navbar-color: #bdbfd4;
   --gen-navbar-hover-color: #7de260;
